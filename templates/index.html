@@ -1,0 +1,46 @@
+
+    {% extends 'base.html' %}
+    {% block content %}
+        
+    <section class="about" id="about">
+        {% load static %}
+        <img src="{% static 'rasmlar/IMG_20220801_183154.jpg' %}" alt="" width="500px">
+        <div class="card">
+            <h1>Nurazizcom NnN</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem dolorum rerum in earum, totam iste velit, adipisci tempore dolore perspiciatis laudantium est a ex facilis officiis aspernatur doloribus quasi quisquam.</p>
+            <button>Get started --></button>
+        </div>
+    </section>
+    <section class="sticky">
+        <div class="ro1">
+            <div class="r1" style="background: red;"><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, beatae. Nulla rem animi eaque dolores esse consequatur, iure maiores! Architecto quas voluptatum animi, consectetur eius molestiae fuga. Illum, reiciendis vel!</p></div>
+            <div class="r2" style="background: green;"><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, beatae. Nulla rem animi eaque dolores esse consequatur, iure maiores! Architecto quas voluptatum animi, consectetur eius molestiae fuga. Illum, reiciendis vel!</p></div>
+        </div>
+        <div class="ro2">
+            <h1>sitky</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente eius ea tenetur fugiat vel, rerum temporibus, inventore corporis cumque id in nesciunt provident quaerat incidunt deleniti magni eligendi dolorum recusandae.</p>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="ro1">
+            <h1>Nur-Games</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum repellat, voluptatem iusto optio corrupti quod quo architecto non in aliquid? Non et voluptates vero in distinctio hic laboriosam deleniti dignissimos!</p>
+        </div>
+        <div class="ro2">
+            <ul class="navlinks">
+                <li><a href="/">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="/admin">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+    {% endblock content %}
+<script>
+    let nav = document.getElementById('nav');
+    let togglel = document.getElementById('toggle');
+    togglel.onclick = function (){
+        nav.classList.toggle('b');
+        console.log(1);
+    }
+</script>
+    </main>

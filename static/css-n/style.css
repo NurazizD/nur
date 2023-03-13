@@ -1,0 +1,349 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background: url("IMG_20220801_183154.jpg") crimson;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+nav{
+    width: 100%;
+    height: 100px;
+    position:sticky;
+    z-index: 9999999999;
+    left: 1.2em;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    transition: 1s all;
+}
+nav .container{
+    width: 100%;
+    height: 70px;
+    background: red;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.container>.navlinks{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 40%;
+}
+.container>.navlinks>li{
+   list-style: none;
+   font-size:19px;
+   font-weight: 400;
+}
+.container>.navlinks>li>a{
+   text-decoration: none;
+   color: #0f0f0f;
+   font-size:19px;
+   font-weight: 400;
+}
+.container>.navlinks>li>a:hover{
+   border-bottom:1px solid #fff ;
+   color: #fff;
+   font-size:19px;
+   font-weight: 400;
+   transition: 0.5s all;
+}
+.top{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 23px;
+}
+.logo{
+    font-size: 27px;
+    border: 1px solid black;
+}
+.login{
+    outline: none;
+    border: none;
+    background: transparent;
+    font-size: 17px;
+}
+.full{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.full>h1{
+    font-size: 100px;
+    color: #fff;
+}
+.full> p{
+    color: rgba(255, 255, 255, 0.48);
+    font-size: 20px;
+}
+.full>button{
+    padding: 10px 20px;
+    margin-top: 50px;
+    background: #fff;
+     border: none;
+     font-size: 20px;
+     box-shadow: rgb(255, 0, 255) 13px 10px 1px 3px;
+}
+.squere{
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    z-index: 9999;
+    left: 713px;
+    top: 300px;
+    clip-path: polygon(100% 0, 50% 100%, 0 0);
+    transform: rotate(160deg);
+}
+.squere::before{
+    content: '';
+    width: 50px;
+    height: 50px;
+    z-index: -1;
+    background: pink;
+}
+.about{
+    width: 100%;
+    height: 100vh;
+    background: yellow;
+    display: flex;
+    justify-content: space-around;
+    align-items: center
+}
+.card{
+    width: 30%;
+    height: 10vh;
+}
+.card>button{
+    background: linear-gradient(to left,blue,rgb(251, 0, 251));
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    margin-top: 10px;
+    color: #fff;
+}
+.cards{
+    width: 100%;
+    height: 100vh;
+    background: #0f0f0f;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 250px 20px;
+}
+.card-n{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: red;
+}
+.rel{
+   position: absolute;
+   width: 300px;
+   height: 200px;
+   opacity: 1;
+   top: 100px;
+   left: 0;
+   transition: 0.9s;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background:rgba(0, 0, 0, 0.525) ;
+}
+.rel h1{
+    color: #fff;
+    font-size: 53px;
+}
+.rel p{
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 24px;
+}
+.rel button{
+    margin-top: 10px;
+    width: 50%;
+    height: 20px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    padding: 0px 10px;
+    font-size: 17px;
+    transition: 0.7s;
+    border: orange 1px solid;
+}
+.rel button:hover{
+    color: black;
+    background: orange;
+}
+.card-img{
+    width: 100%;
+    height: 100%;
+}
+.card-img:hover .rel{
+    opacity: 1;
+    top: 100px;
+}
+footer{
+    width: 100%;
+    height: 40vh;
+    background: rgb(0, 106, 255);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.ro1{
+    width: 30%;
+}
+.ro2{
+    width: 20%;
+}
+.ro1 h1{
+    color: #fff;
+}
+.ro1 p{
+    color: rgba(255, 255, 255, 0.564);
+}
+.ro2 li{
+    list-style: georgian;
+}
+.ro2 li>a{
+    color: #0f0f0f;
+    text-decoration: none;
+    transition: 0.7s all;
+}
+.ro2 li>a:hover{
+    border-bottom: 1px #fff solid;
+    color: #fff;
+}
+.toggle{
+    display: none;
+}
+@media screen and (max-width:480px) {
+    .top{
+        width: 0;
+        height: 0;
+        display: none;
+    }
+    .squere{
+        display: none;
+    }
+    .about{
+        flex-direction: column;
+        height: 90vh;
+        justify-content: center;
+        align-items: center;
+    }
+    .about .card{
+        width: 50%;
+    }
+    .about img{
+        width: 400px;
+    }
+    nav{
+        width: 100%;
+        left: 0;
+    }
+    .toggle{
+        display: block;
+        border: none;
+        font-size: 22px;
+        background: transparent;
+    }
+    nav .navlinks{
+        position: absolute;
+        left: -970px;
+        width: 200px;
+        padding: 100px 150px;
+        height: 100vh;
+        background: red;
+        display: flex;
+        top: 70px;
+        flex-direction: column;
+        transition: 0.6s;
+    }
+    .cards{
+        flex-direction: column;
+        height: 200vh;
+    }
+    .navlinks.b{
+        left: 0px;
+    }
+}
+.animated-text {
+    height: 60px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    
+}
+
+.animated-text h3 {
+color:yellowgreen;
+font-size: 52px;
+font-weight: 700;
+line-height: 70px;
+letter-spacing: 1px;
+}
+
+.animated-text h3:nth-child(1) {
+animation: text-move 10s infinite
+}
+
+@keyframes text-move {
+0% {
+margin-top: 0;
+}
+
+25% {
+margin-top: -70px;
+}
+
+50% {
+margin-top: -140px;
+}
+
+75% {
+margin-top: -70px;
+}
+
+100% {
+margin-top: 0;
+}
+}
+.sticky{
+width: 100%;
+height: 100vh;
+background: #0f0f0f;
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+align-items: center;
+color: #fff;
+position: sticky;
+}
+.sticky>.ro1{
+position: relative;
+height: 300px;
+overflow: scroll;
+}
+.r1,.r2{
+position: sticky;
+height: 300px;
+
+}

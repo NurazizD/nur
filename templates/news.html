@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games News</title>
+    <style>
+        body{
+            
+        }
+        .li{
+            background: #fff;
+            margin: 10px;
+            padding: 10px;
+            border: royalblue 3px solid;
+        }
+        h3{
+            color: cadetblue;
+            font-size: 17px;
+        } 
+        h2{
+            color: blue;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: 100;
+        }
+        nav{
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    {% extends 'base.html' %}
+{% block content %}
+
+
+<ul>
+    {% for post in object_list %}
+    <li class="li">
+        <h2>{{ post.title }}</h2><br>
+        <h3>{{ post.text | slice:"100" }}</h3> <br>
+        <a href="{% url 'post_detail' post.pk %}" style="color: blue;">davomi</a>
+        
+    </li>
+    {% endfor %}
+</ul>
+
+
+{% endblock content %}
+
+</body>
+</html>

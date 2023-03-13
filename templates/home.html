@@ -1,0 +1,54 @@
+
+{% extends 'base.html' %}
+{% block content %}
+
+        <div class="full">
+            <h1>Game on!</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <button class="read">read more >></button>
+            <div class="squere"></div>
+        </div>
+        <section class="cards" id="games">
+            <div class="card-n">
+                {% load static %}
+                <img src="{% static 'rasmlar/IMG_20220801_183154.jpg' %}" alt="" width="100px" class="card-img">
+                <div class="rel">
+                    <h1>Game 1</h1>
+                    <p>lorem lorem 23$</p>
+                    <button>Buy-$</button>
+                </div>
+            </div>
+            <div class="card-n">
+                 {% load static %}
+                <img src="{% static 'rasmlar/IMG_20220801_183154.jpg' %}" alt="" width="100px" class="card-img">
+                <div class="rel">
+                    <h1>Game 1</h1>
+                    <p>lorem lorem 37$</p>
+                    <button>Buy-$</button>
+                </div>
+            </div>
+            <div class="card-n">
+                {% load static %}
+                <img src="{% static 'rasmlar/IMG_20220801_183154.jpg' %}" alt="" width="100px" class="card-img">
+                <div class="rel">
+                    <h1>Game 1</h1>
+                    <p>lorem lorem 77$</p>
+                    <button>Buy-$</button>
+                </div>
+            </div>
+        </section>
+        <footer id="footer">
+            <div class="ro1">
+                <h1>Nur-Games</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum repellat, voluptatem iusto optio corrupti quod quo architecto non in aliquid? Non et voluptates vero in distinctio hic laboriosam deleniti dignissimos!</p>
+            </div>
+            <div class="ro2">
+                <ul class="navlinks">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="about/">About</a></li>
+                    <li><a href="admin/">Contact</a></li>
+                </ul>
+            </div>
+        </footer>
+        {% endblock content %}
+<

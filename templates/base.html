@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games Nur.uz</title>
+    <link rel="stylesheet" href="{% static 'css-n/style.css' %}">
+</head>
+<body>
+    <main>
+    <nav>
+        <div class="top">
+            <div class="animated-text">
+                <h3>Sayt test rijimida !!!</h3>
+                <h3>Sayt test rijimida !!!</h3>
+                <h3>Sayt test rijimida !!!</h3>   
+            </div>
+            <p>follow us: @ $ % ^ & ----------</p>
+        </div>
+        <div class="container">
+            <div class="logo">Nur Games</div>
+            <ul class="navlinks" id="nav">
+                <li><a href="{% url 'home' %}">Bosh minu</a></li>
+                <li><a href="{% url 'about' %}">Sayt haqida</a></li>
+                <li><a href="{% url 'news' %}">Yangilikar</a></li>
+                <li><a href="{% url 'contact' %}">so`rov yuborish</a></li>
+                <!-- <li><a href="#footer">footer</a></li> -->
+            </ul>
+            <button class="login"><a href="/admin/">Login\registr</a></button>
+            <button class="toggle" id="toggle">=</button>
+        </div>
+    </nav>
+    <script>
+        let nav = document.getElementById('nav');
+        let togglel = document.getElementById('toggle');
+        togglel.onclick = function (){
+            nav.classList.toggle('b');
+            console.log(1);
+        }
+    </script>
+    <script>
+        function see(){
+            let po = document.getElementById("port");
+            po.classList.add('se');
+            console.log(1);
+        }
+        function seere(){
+            let po = document.getElementById("port");
+            po.classList.remove('se');
+            console.log(1);
+        }
+        
+           
+        </script>
+    {% block content %}
+    {% endblock content %}
+</main>
+</body>
+</html>
